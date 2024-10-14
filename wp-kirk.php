@@ -1,12 +1,12 @@
 <?php
 
 /**
- * Plugin Name: WP Kirk Boilerplate
+ * Plugin Name: WP Kirk Database Boilerplate
  * Plugin URI: https://github.com/wpbones/WPKirk-Boilerplate
  * Description: WP Bones Boilerplate WordPress plugin
- * Version: 1.6.5
+ * Version: 1.7.0
  * Requires at least: 6.2
- * Requires PHP: 7.4
+ * Requires PHP: 8.2
  * Author: Giovambattista Fazioli
  * Author URI: https://wpbones.com/
  * License: GPLv2 or later

@@ -1,7 +1,7 @@
 <?php
 
 if (!defined('ABSPATH')) {
-    exit();
+  exit();
 }
 
 /*
@@ -15,20 +15,44 @@ if (!defined('ABSPATH')) {
 */
 
 return [
-    'wp_kirk_slug_menu' => [
-        "page_title" => "WP Kirk Page",
-        "menu_title" => "WP Kirk Menu",
+  'wp_kirk_slug_menu' => [
+    "page_title" => "WP Kirk Page",
+    "menu_title" => "WP Kirk Menu",
+    'capability' => 'read',
+    'icon' => 'wpbones-logo-menu.png',
+    'items' => [
+      [
+        "page_title" => "DB",
+        "menu_title" => "DB",
         'capability' => 'read',
-        'icon' => 'wpbones-logo-menu.png',
-        'items' => [
-            [
-                "page_title" => "Main View",
-                "menu_title" => "Main View",
-                'capability' => 'read',
-                'route' => [
-                    'get' => 'Dashboard\DashboardController@index'
-                ],
-            ],
-        ]
+        'route' => [
+          'get' => 'Examples\DatabaseController@db'
+        ],
+      ],
+      [
+        "page_title" => "Model",
+        "menu_title" => "Model",
+        'capability' => 'read',
+        'route' => [
+          'get' => 'Examples\DatabaseController@simpleModel'
+        ],
+      ],
+      [
+        "page_title" => "Model NoPrefix",
+        "menu_title" => "Model NoPrefix",
+        'capability' => 'read',
+        'route' => [
+          'get' => 'Examples\DatabaseController@noPrefixModel'
+        ],
+      ],
+      [
+        "page_title" => "Eloquent ORM",
+        "menu_title" => "Eloquent ORM",
+        'capability' => 'read',
+        'route' => [
+          'get' => 'Examples\DatabaseController@eloquent'
+        ],
+      ],
     ]
+  ]
 ];
