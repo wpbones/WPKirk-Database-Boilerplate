@@ -14,18 +14,13 @@ class MyPluginProduct extends Model
    */
   public $timestamps = false;
 
-  protected $table = 'my_plugin_products';
+  //protected $table = 'my_plugin_products';
 
   /**
    * Get the table associated with the model.
    */
   public function getTable(): string
   {
-    global $wpdb;
-
-    logger(parent::getTable());
-
-    return $wpdb->prefix . parent::getTable();
-    //return DB::getTableName(__CLASS__);
+    return DB::getTableName('MyPluginProducts');
   }
 }

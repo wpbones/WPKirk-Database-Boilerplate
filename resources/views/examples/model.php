@@ -6,7 +6,10 @@
  | return PluginClassName()->view( 'dashboard.index', [ 'var' => 'value' ] );
  |
 -->
-<?php use WPKirk\Models\MyPluginProducts;
+<?php
+
+use WPKirk\Models\MyPluginProducts;
+use WPKirk\Models\MyPluginBooks;
 
 ?>
 
@@ -24,7 +27,7 @@
   <div class="wp-kirk-toc-content">
 
     <p>In your Plugin you may use the Database Model class instead of the <a target="_blank"
-                                                                             href="https://wpbones.com/docs/DatabaseORM/query-builder">Query
+        href="https://wpbones.com/docs/DatabaseORM/query-builder">Query
         Builder</a>.</p>
     <p>To use the Model convection you need to extend the Model class:</p>
 
@@ -69,8 +72,32 @@ class MyPluginProducts extends Model
 
 
     <p>You can find more <a target="_blank"
-                            href="https://wpbones.com/docs/DatabaseORM/model">example
+        href="https://wpbones.com/docs/DatabaseORM/model">example
         here</a></>
+
+
+    <p><?php _e('You may also define w WP Bones Model and use the class directly.', 'wp-kirk'); ?></p>
+
+    <?php wpkirk_code('php', "&lt;?php
+namespace WPKirk\Models;
+
+use WPKirk\WPBones\Database\Model;
+
+class MyPluginBooks extends Model
+{
+  protected \$usePrefix = false;
+
+  /**
+    * You may comment out this property if you want to use the class name.
+    *
+    * @var string The table associated with the model.
+    */
+  //protected \$table = 'my_plugin_books';
+}") ?>
+
+
+    <?php wpkirk_code('php', "echo MyPluginBooks::all()->count()"); ?>
+    <?php wpkirk_execute_code('', fn() => MyPluginBooks::all()->count()); ?>
 
   </div>
 </div>
