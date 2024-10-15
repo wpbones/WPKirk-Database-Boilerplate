@@ -24,19 +24,17 @@ ob_start();
   <div class="wp-kirk-toc-content">
 
     <!-- ----------------------------------------------------- -->
-
     <?php wpkirk_section('illuminate', __('Illuminate Eloquent ORM', 'wp-kirk')); ?>
 
     <p><?php _e('You may include the Eloquent ORM to provide a beautiful, simple ActiveRecord implementation for working with your database. Each database table has a corresponding "Model" which is used to interact with that table. Models allow you to query for data in your tables, as well as insert new records into the table.', 'wp-kirk'); ?></p>
 
     <p><?php _e('You may install Eloquent ORM in your plugin by using', 'wp-kirk'); ?></p>
 
-    <pre><code class="language-sh">composer install illuminate/database</code></pre>
+    <?php wpkirk_code('sh', "composer install illuminate/database") ?>
 
     <p><?php _e('As we are using the complete illuminate database package, for further documentation on using the various database facilities this library provides, consult the', 'wp-kirk'); ?> <a href="https://laravel.com/docs/8.x/eloquent"><?php _e('Laravel framework documentation', 'wp-kirk'); ?></a></p>
 
     <!-- ----------------------------------------------------- -->
-
     <?php wpkirk_section('query-wp', __('Query WordPress users table', 'wp-kirk')); ?>
 
     <?php wpkirk_code('php', "&lt;?php
@@ -72,7 +70,6 @@ var_dump(User::all());") ?>
     <?php wpkirk_output(fn() => var_dump(User::all())) ?>
 
     <!-- ----------------------------------------------------- -->
-
     <?php wpkirk_section('find', __('Find a user by ID', 'wp-kirk')); ?>
 
     <p><?php _e('Of course, you\'ll be able to use all eloquent features', 'wp-kirk'); ?></p>
@@ -84,7 +81,6 @@ var_dump(User::find(1)->user_email);") ?>
     <?php wpkirk_execute_code('json', fn() => var_dump(User::find(1)->user_email)); ?>
 
     <!-- ----------------------------------------------------- -->
-
     <?php wpkirk_section('custom-table', __('Custom Database Table', 'wp-kirk')); ?>
 
     <p><?php _e('Alongside the WordPress table you may use eloquent for your custom database table', 'wp-kirk'); ?></p>
@@ -161,7 +157,6 @@ var_dump(Product::all());") ?>
     <?php wpkirk_output(fn() => var_dump(Product::find(3)->name)); ?>
 
     <!-- ----------------------------------------------------- -->
-
     <?php wpkirk_section('loop-into', __('Loop into', 'wp-kirk')); ?>
 
     <p><?php _e('You can loop into the results', 'wp-kirk'); ?></p>
@@ -181,7 +176,6 @@ var_dump(Product::all());") ?>
     <p><?php _e('For further documentation on using the various database facilities this library provides, consult the', 'wp-kirk'); ?> <a target="_blank" href="https://laravel.com/docs/5.8/eloquent"><?php _e('Laravel framework documentation', 'wp-kirk'); ?></a></p>
 
     <!-- ----------------------------------------------------- -->
-
     <?php wpkirk_section('no-prefix', __('Eloquent Model with no WordPress prefix', 'wp-kirk')); ?>
 
     <p><?php _e('You can use an Eloquent model without the WordPress prefix. Just define your model as shown below.', 'wp-kirk'); ?></p>
@@ -241,7 +235,6 @@ var_dump(Product::all());") ?>
     }); ?>
 
     <!-- ----------------------------------------------------- -->
-
     <?php wpkirk_section('class-model', __('Eloquent Class Model', 'wp-kirk')); ?>
 
     <p><?php _e('You can use the model class to interact with the database.', 'wp-kirk'); ?></p>
