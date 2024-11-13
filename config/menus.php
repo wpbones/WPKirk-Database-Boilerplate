@@ -16,8 +16,8 @@ if (!defined('ABSPATH')) {
 
 return [
   'wp_kirk_slug_menu' => [
-    "page_title" => "WP Kirk Page",
-    "menu_title" => "WP Kirk Menu",
+    "page_title" => "Database",
+    "menu_title" => "Database",
     'capability' => 'read',
     'icon' => 'wpbones-logo-menu.png',
     'items' => [

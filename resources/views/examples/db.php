@@ -6,71 +6,58 @@
  | return PluginClassName()->view( 'dashboard.index', [ 'var' => 'value' ] );
  |
 -->
-<?php
-
-use WPKirk\WPBones\Database\DB;
-
-ob_start()
-?>
+<?php ob_start() ?>
 
 <div class="wp-kirk wrap wp-kirk-sample">
-
-  <h1><?php _e('Database', 'wp-kirk'); ?></h1>
 
   <div class="wp-kirk-toc-content">
 
     <!-- ----------------------------------------------------- -->
-    <?php wpkirk_section('query-builder', __('Query Builder', 'wp-kirk')); ?>
+    <?php wpkirk_section(__('Query Builder', 'wp-kirk')); ?>
 
     <p><?php _e("WP Bones's database query builder provides a convenient, fluent interface to creating and running database queries. It can be used to perform most database operations in your WordPress instance.", 'wp-kirk'); ?></p>
 
-    <?php wpkirk_code('php', "DB::table('users')
-    ->all();") ?>
+    <?php wpkirk_code("use WPKirk\WPBones\Database\DB;
 
-
-    <?php wpkirk_output(fn() => DB::table('users')->all()->dump()) ?>
+echo DB::table('users')->all()->dump();", ['eval' => true, 'details' => false]) ?>
 
     <!-- ----------------------------------------------------- -->
-    <?php wpkirk_section('example', __('Example', 'wp-kirk')); ?>
+    <?php wpkirk_section(__('Example', 'wp-kirk')); ?>
 
-    <?php wpkirk_code(
-      'php',
-      'foreach (DB::table(\'users\')->get() as $user) {
+    <?php wpkirk_code('use WPKirk\WPBones\Database\DB;
+
+foreach (DB::table(\'users\')->get() as $user) {
   echo "{$user->user_login}\n";
- }'
-    ) ?>
-
-    <?php wpkirk_output(function () {
-      foreach (DB::table('users')->get() as $user) {
-        echo "{$user->user_login}\n";
-      }
-    }) ?>
+}', ['eval' => true]) ?>
 
     <p><?php _e("You can find more", 'wp-kirk'); ?> <a target="_blank" href="https://wpbones.com/docs/DatabaseORM/query-builder"><?php _e("example here", 'wp-kirk'); ?></a></p>
 
     <!-- ----------------------------------------------------- -->
-    <?php wpkirk_section('no-prefix', __('No Prefix', 'wp-kirk')); ?>
+    <?php wpkirk_section(__('Migrations & Seeders', 'wp-kirk')); ?>
 
-    <p><?php printf(
-          __('You can set the %s property to false in the model to not use the WordPress prefix.', 'wp-kirk'),
-          '<code class="language-php inline">usePrefix</code>'
-        ); ?></p>
+    <p><?php _e("You may use the migrations to create your own custom database tables.", 'wp-kirk'); ?></p>
 
-    <?php wpkirk_code('php', 'DB::table(\'my_plugin_books\', \'id\', false)->all();') ?>
+    <?php wpkirk_code('@/database/migrations/2015_12_12_134527_create_products_table.php'); ?>
 
-    <?php wpkirk_output(fn() => DB::table('my_plugin_books', 'id', false)->all()->dump()) ?>
+    <p><?php _e("And the Seeder to insert default records", 'wp-kirk'); ?></p>
+    <?php wpkirk_code('@/database/seeders/ProductSeeder.php'); ?>
 
-    <p><?php printf(
-          __('Or you can use the %s method as shorthand.', 'wp-kirk'),
-          '<code class="language-php inline">tableWithoutPrefix()</code>'
-        ); ?></p>
+    <?php wpkirk_section(__('No Prefix', 'wp-kirk')); ?>
 
-    <?php wpkirk_code('php', 'DB::tableWithoutPrefix(\'my_plugin_books\')->all();') ?>
+    <p><?php wpkirk_md(__('You can set the `usePrefix` property to false in the model to not use the WordPress prefix.', 'wp-kirk'),); ?></p>
 
-    <?php wpkirk_output(fn() => DB::tableWithoutPrefix('my_plugin_books')->all()->dump()) ?>
+    <?php wpkirk_code('use WPKirk\WPBones\Database\DB;
+
+echo DB::table(\'my_plugin_books\', \'id\', false)->all()->dump();', ['eval' => true, 'details' => false]) ?>
+
+    <p><?php wpkirk_md(__('Or you can use the `tableWithoutPrefix()` method as shorthand.', 'wp-kirk'),); ?></p>
+
+    <?php wpkirk_code('use WPKirk\WPBones\Database\DB;
+
+echo DB::tableWithoutPrefix(\'my_plugin_books\')->all()->dump();', ['eval' => true, 'details' => false]) ?>
 
   </div>
 
-  <?php wpkirk_toc() ?>
+  <?php wpkirk_toc('DB Class') ?>
 
 </div>

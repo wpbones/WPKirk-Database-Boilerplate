@@ -20,8 +20,8 @@
   },
   "require": {
     "php": ">=8.2",
-    "wpbones/wpbones": "~1.7",
-    "wpbones/wpkirk-helpers": "~1.0",
+    "wpbones/wpbones": "dev-dev",
+    "wpbones/wpkirk-helpers": "dev-dev",
     "illuminate/database": "~11.0"
   },
   "autoload": {

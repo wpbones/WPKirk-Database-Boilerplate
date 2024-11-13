@@ -6,93 +6,52 @@
  | return PluginClassName()->view( 'dashboard.index', [ 'var' => 'value' ] );
  |
 -->
-<?php
-
-use WPKirk\Models\MyPluginProducts;
-use WPKirk\Models\MyPluginBooks;
-
-ob_start()
-?>
+<?php ob_start() ?>
 
 <div class="wp-kirk wrap wp-kirk-sample">
-
-  <h1 id="model">Model</h1>
 
   <div class="wp-kirk-toc-content">
 
     <!-- ----------------------------------------------------- -->
-    <?php wpkirk_section('class-model', __('Class Model', 'wp-kirk')); ?>
+    <?php wpkirk_section(__('Class Model', 'wp-kirk')); ?>
 
-    <p>In your Plugin you may use the Database Model class instead of the <a target="_blank"
+    <p><?php _e('In your Plugin you may use the Database Model class instead of the', 'wp-kirk') ?> <a target="_blank"
         href="https://wpbones.com/docs/DatabaseORM/query-builder">Query
         Builder</a>.</p>
-    <p>To use the Model convection you need to extend the Model class:</p>
+    <p><?php _e('To use the Model convection you need to extend the Model class:', 'wp-kirk'); ?></p>
 
 
-    <?php wpkirk_code('php', "&lt;?php
-namespace WPKirk\Models;
+    <?php wpkirk_code("@/plugin/Models/MyPluginProducts.php") ?>
 
-use WPKirk\WPBones\Database\Model;
+    <p><?php wpkirk_md(__('We don\'t support the automatic plural naming of the table at the moment. Anyway, the default table name will be
+      the "snake case" of the class name. For example, the class `Users` will be associated with the table `users`. The class `UsersLogged` will be associated with the table `users_logged`.', 'wp-kirk'), 'php') ?></p>
 
-class MyPluginProducts extends Model
-{
-}") ?>
+    <p><?php wpkirk_md(__('If your model\'s corresponding database table does not fit this convention, you may manually specify the model\'s table name by defining a `table` property on the model:', 'wp-kirk'), 'php') ?></p>
 
-
-    <p>We don't support the automatic plural naming of the table at the moment. Anyway, the default table name will be
-      the "snake case" of the class name. For example, the class <code class="language-php inline">Users</code> will be associated with the table
-      <code class="language-php inline">users</code>. The class <code class="language-php inline">UsersLogged</code> will be associated with the table
-      <code class="language-php inline">users_logged</code>.
-    </p>
-
-    <p>If your model's corresponding database table does not fit this convention, you may manually specify the model's
-      table name by defining a <code class="language-php inline">table</code> property on the model:</p>
-
-    <?php wpkirk_code('php', "&lt;?php
-namespace WPKirk\Models;
-
-use WPKirk\WPBones\Database\Model;
-
-class MyPluginProducts extends Model
-{
-  protected $table = 'my_plugin_products';
-}") ?>
+    <p><?php wpkirk_md(__('You can also disable the prefix by setting the `usePrefix` property to `false`.', 'wp-kirk'), 'php') ?></p>
 
     <!-- ----------------------------------------------------- -->
-    <?php wpkirk_section('example', __('Example', 'wp-kirk')); ?>
+    <?php wpkirk_section(__('Example', 'wp-kirk')); ?>
 
-    <?php wpkirk_code('php', "echo MyPluginProducts::all()") ?>
-    <?php wpkirk_output(fn() => MyPluginProducts::all()->dump()) ?>
+    <?php wpkirk_code("use WPKirk\Models\MyPluginProducts;
 
-    <p>You can find more <a target="_blank"
-        href="https://wpbones.com/docs/DatabaseORM/model">example
-        here</a></>
+echo MyPluginProducts::all();", ['eval' => true]) ?>
 
-    <p><?php _e('You may also define w WP Bones Model and use the class directly.', 'wp-kirk'); ?></p>
+    <p>
+      <a class="button button-primary" target="_blank"
+        href="https://wpbones.com/docs/DatabaseORM/model"><?php _e("More Examples", 'wp-kirk') ?> ↗</a>
+    </p>
 
-    <?php wpkirk_code('php', "&lt;?php
-namespace WPKirk\Models;
+    <p><?php _e('You may also define a WP Bones Model and use the class directly.', 'wp-kirk'); ?></p>
 
-use WPKirk\WPBones\Database\Model;
+    <?php wpkirk_code("@/plugin/Models/MyPluginBooks.php") ?>
 
-class MyPluginBooks extends Model
-{
-  protected \$usePrefix = false;
+    <?php wpkirk_code("use WPKirk\Models\MyPluginBooks;
 
-  /**
-    * You may comment out this property if you want to use the class name.
-    *
-    * @var string The table associated with the model.
-    */
-  //protected \$table = 'my_plugin_books';
-}") ?>
-
-
-    <?php wpkirk_code('php', "echo MyPluginBooks::all()->count()"); ?>
-    <?php wpkirk_execute_code('', fn() => MyPluginBooks::all()->count()); ?>
+echo MyPluginBooks::all()->count();", ['eval' => true]); ?>
 
   </div>
 
-  <?php wpkirk_toc() ?>
+  <?php wpkirk_toc('Models') ?>
 
 </div>

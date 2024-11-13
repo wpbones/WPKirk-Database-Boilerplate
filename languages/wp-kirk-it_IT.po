@@ -1,68 +1,276 @@
+# Copyright (C) 2024 Giovambattista Fazioli
+# This file is distributed under the GPLv2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: WP Kirk\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-21 16:56+0100\n"
-"PO-Revision-Date: 2016-11-21 16:56+0100\n"
+"Project-Id-Version: WP Kirk Database Boilerplate 1.7.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-kirk\n"
+"POT-Creation-Date: 2024-11-13T09:33:06+00:00\n"
+"PO-Revision-Date: 2024-11-13 10:37+0100\n"
 "Last-Translator: \n"
-"Language-Team: Giovambattista Fazioli <giovambattista.fazioli@gmail.com>\n"
-"Language: it_IT\n"
+"Language-Team: \n"
+"Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-KeywordsList: __;_e;_n:1,2;_nx:1,2\n"
-"X-Poedit-Basepath: ..\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 1.8.11\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Poedit-SearchPath-0: .\n"
-"X-Poedit-SearchPathExcluded-0: node_modules\n"
-"X-Poedit-SearchPathExcluded-1: vendor\n"
+"X-Generator: Poedit 3.5\n"
+"X-Domain: wp-kirk\n"
 
-#~ msgid "You can localize me"
-#~ msgstr "Mi puoi localizzare"
+#. Plugin Name of the plugin
+#: wp-kirk.php
+msgid "WP Kirk Database Boilerplate"
+msgstr "WP Kirk Database Boilerplate"
 
-#~ msgid "Description"
-#~ msgstr "Descrizione"
+#. Plugin URI of the plugin
+#: wp-kirk.php
+msgid "https://github.com/wpbones/WPKirk-Boilerplate"
+msgstr "https://github.com/wpbones/WPKirk-Boilerplate"
 
-#~ msgid "Placeholders"
-#~ msgstr "Segnaposti"
+#. Description of the plugin
+#: wp-kirk.php
+msgid "WP Bones Boilerplate WordPress plugin"
+msgstr "WP Bones Boilerplate Plugin WordPress"
 
-#~ msgid "Environment"
-#~ msgstr "Ambienti"
+#. Author of the plugin
+#: wp-kirk.php
+msgid "Giovambattista Fazioli"
+msgstr "Giovambattista Fazioli"
 
-#~ msgid "Places"
-#~ msgstr "Posti"
+#. Author URI of the plugin
+#: wp-kirk.php
+msgid "https://wpbones.com/"
+msgstr "https://wpbones.com/"
 
-#~ msgid "Status"
-#~ msgstr "Stato"
+#: resources/views/examples/db.php:16
+msgid "Query Builder"
+msgstr "Generatore di query"
 
-#~ msgid "Name"
-#~ msgstr "Nome"
+#: resources/views/examples/db.php:18
+msgid ""
+"WP Bones's database query builder provides a convenient, fluent interface to "
+"creating and running database queries. It can be used to perform most "
+"database operations in your WordPress instance."
+msgstr ""
+"Il generatore di query per database di WP Bones fornisce un'interfaccia "
+"comoda e fluida per la creazione e l'esecuzione di query su database. Può "
+"essere utilizzato per eseguire la maggior parte delle operazioni di database "
+"nell'istanza di WordPress."
 
-#~ msgid "Publish"
-#~ msgstr "Pubblica"
+#: resources/views/examples/db.php:25
+#: resources/views/examples/model-no-prefix.php:29
+#: resources/views/examples/model.php:34
+msgid "Example"
+msgstr "Esempio"
 
-#~ msgid "Trash"
-#~ msgstr "Cestino"
+#: resources/views/examples/db.php:33
+msgid "You can find more"
+msgstr "Puoi trovare di più"
 
-#~ msgid "Edit"
-#~ msgstr "Modifica"
+#: resources/views/examples/db.php:33
+msgid "example here"
+msgstr "esempio qui"
 
-#~ msgid "Restore"
-#~ msgstr "Repristina"
+#: resources/views/examples/db.php:36
+msgid "Migrations & Seeders"
+msgstr "Migrazioni e Seeder"
 
-#~ msgid "Delete"
-#~ msgstr "Elimina"
+#: resources/views/examples/db.php:38
+msgid "You may use the migrations to create your own custom database tables."
+msgstr ""
+"È possibile utilizzare le migrazioni per creare tabelle di database "
+"personalizzate."
 
-#~ msgid "Icon"
-#~ msgstr "Icona"
+#: resources/views/examples/db.php:42
+msgid "And the Seeder to insert default records"
+msgstr "E il Seeder per inserire i record predefiniti"
 
-#~ msgid "Move to Trash"
-#~ msgstr "Sposta nel cestino"
+#: resources/views/examples/db.php:45
+#: resources/views/examples/model-no-prefix.php:22
+msgid "No Prefix"
+msgstr "Nessun prefisso"
 
-#~ msgid "Add"
-#~ msgstr "Aggiungi"
+#: resources/views/examples/db.php:47
+msgid ""
+"You can set the `usePrefix` property to false in the model to not use the "
+"WordPress prefix."
+msgstr ""
+"È possibile impostare la proprietà 'usePrefix' su false nel modello per non "
+"utilizzare il prefisso di WordPress."
 
-#~ msgid "Update"
-#~ msgstr "Aggiorna"
+#: resources/views/examples/db.php:53
+msgid "Or you can use the `tableWithoutPrefix()` method as shorthand."
+msgstr ""
+"Oppure puoi utilizzare il metodo 'tableWithoutPrefix()' come abbreviazione."
+
+#: resources/views/examples/eloquent.php:16
+msgid "Illuminate Eloquent ORM"
+msgstr "Illuminate Eloquent ORM"
+
+#: resources/views/examples/eloquent.php:18
+msgid ""
+"You may include the Eloquent ORM to provide a beautiful, simple ActiveRecord "
+"implementation for working with your database. Each database table has a "
+"corresponding \"Model\" which is used to interact with that table. Models "
+"allow you to query for data in your tables, as well as insert new records "
+"into the table."
+msgstr ""
+"È possibile includere l'Eloquent ORM per fornire un'implementazione "
+"ActiveRecord semplice e bella per lavorare con il database. Ogni tabella di "
+"database ha un \"Modello\" corrispondente che viene utilizzato per "
+"interagire con quella tabella. I modelli consentono di eseguire query sui "
+"dati nelle tabelle e di inserire nuovi record nella tabella."
+
+#: resources/views/examples/eloquent.php:20
+msgid "You may install Eloquent ORM in your plugin by using"
+msgstr "Puoi installare Eloquent ORM nel tuo plugin utilizzando"
+
+#: resources/views/examples/eloquent.php:24
+msgid ""
+"As we are using the complete illuminate database package, for further "
+"documentation on using the various database facilities this library "
+"provides, consult the"
+msgstr ""
+"Poiché stiamo utilizzando il pacchetto completo del database illuminate, per "
+"ulteriore documentazione sull'utilizzo delle varie strutture di database "
+"fornite da questa biblioteca, consultare il"
+
+#: resources/views/examples/eloquent.php:24
+#: resources/views/examples/eloquent.php:82
+msgid "Laravel framework documentation"
+msgstr "Documentazione del framework Laravel"
+
+#: resources/views/examples/eloquent.php:27
+msgid "Query WordPress users table"
+msgstr "Interroga la tabella degli utenti di WordPress"
+
+#: resources/views/examples/eloquent.php:35
+msgid "Find a user by ID"
+msgstr "Trovare un utente in base all'ID"
+
+#: resources/views/examples/eloquent.php:37
+msgid "Of course, you'll be able to use all eloquent features"
+msgstr ""
+"Naturalmente, sarai in grado di utilizzare tutte le caratteristiche eloquenti"
+
+#: resources/views/examples/eloquent.php:44
+msgid "Custom Database Table"
+msgstr "Tabella del database personalizzata"
+
+#: resources/views/examples/eloquent.php:46
+msgid ""
+"Alongside the WordPress table you may use eloquent for your custom database "
+"table"
+msgstr ""
+"Oltre alla tabella di WordPress, puoi utilizzare eloquent per la tua tabella "
+"di database personalizzata"
+
+#: resources/views/examples/eloquent.php:57
+msgid ""
+"You can use the Eloquent ORM to interact with your custom database tables."
+msgstr ""
+"È possibile utilizzare l'ORM Eloquent per interagire con le tabelle del "
+"database personalizzate."
+
+#: resources/views/examples/eloquent.php:65
+msgid "and get single column value"
+msgstr "e ottieni il valore di una singola colonna"
+
+#: resources/views/examples/eloquent.php:72
+msgid "Loop into"
+msgstr "Ciclare nel risultati"
+
+#: resources/views/examples/eloquent.php:74
+msgid "You can loop into the results"
+msgstr "È possibile eseguire il ciclo nei risultati"
+
+#: resources/views/examples/eloquent.php:82
+msgid ""
+"For further documentation on using the various database facilities this "
+"library provides, consult the"
+msgstr ""
+"Per ulteriore documentazione sull'utilizzo delle varie strutture di database "
+"fornite da questa biblioteca, consultare il"
+
+#: resources/views/examples/eloquent.php:85
+msgid "Eloquent Model with no WordPress prefix"
+msgstr "Modello eloquente senza prefisso WordPress"
+
+#: resources/views/examples/eloquent.php:87
+msgid ""
+"You can use an Eloquent model without the WordPress prefix. Just define your "
+"model as shown below."
+msgstr ""
+"È possibile utilizzare un modello Eloquent senza il prefisso di WordPress. "
+"Basta definire il modello come mostrato di seguito."
+
+#: resources/views/examples/eloquent.php:89
+msgid "In short, use `false` as the second parameter in `DB::getTableName()`"
+msgstr "In breve, usa 'false' come secondo parametro in 'DB::getTableName()'"
+
+#: resources/views/examples/eloquent.php:100
+msgid "and loop into the results"
+msgstr "e si ripetono nei risultati"
+
+#: resources/views/examples/eloquent.php:109
+msgid "Eloquent Class Model"
+msgstr "Eloquent Class Model"
+
+#: resources/views/examples/eloquent.php:111
+msgid "You can use the model class to interact with the database."
+msgstr ""
+"È possibile utilizzare la classe del modello per interagire con il database."
+
+#: resources/views/examples/model-no-prefix.php:36
+#: resources/views/examples/model.php:42
+msgid "More Examples"
+msgstr "Altri esempi"
+
+#: resources/views/examples/model.php:16
+msgid "Class Model"
+msgstr "Modello di classe"
+
+#: resources/views/examples/model.php:18
+msgid "In your Plugin you may use the Database Model class instead of the"
+msgstr ""
+"Nel tuo Plugin potresti utilizzare la classe Modello di Database invece del"
+
+#: resources/views/examples/model.php:21
+msgid "To use the Model convection you need to extend the Model class:"
+msgstr ""
+"Per utilizzare la convenzione Model è necessario estendere la classe Model:"
+
+#: resources/views/examples/model.php:26
+msgid ""
+"We don't support the automatic plural naming of the table at the moment. "
+"Anyway, the default table name will be\n"
+"      the \"snake case\" of the class name. For example, the class `Users` "
+"will be associated with the table `users`. The class `UsersLogged` will be "
+"associated with the table `users_logged`."
+msgstr ""
+"Al momento non supportiamo la denominazione automatica al plurale delle "
+"tabelle. Comunque, il nome predefinito della tabella sarà il “snake case” "
+"del nome della classe. Ad esempio, la classe `Users` sarà associata alla "
+"tabella `users`. La classe `UsersLogged` sarà associata alla tabella "
+"`users_logged`."
+
+#: resources/views/examples/model.php:29
+msgid ""
+"If your model's corresponding database table does not fit this convention, "
+"you may manually specify the model's table name by defining a `table` "
+"property on the model:"
+msgstr ""
+"Se la tabella del database corrispondente al tuo modello non segue questa "
+"convenzione, puoi specificare manualmente il nome della tabella del modello "
+"definendo una proprietà `table` sul modello:"
+
+#: resources/views/examples/model.php:31
+msgid ""
+"You can also disable the prefix by setting the `usePrefix` property to "
+"`false`."
+msgstr ""
+"È inoltre possibile disabilitare il prefisso impostando la proprietà "
+"'usePrefix' su 'false'."
+
+#: resources/views/examples/model.php:45
+msgid "You may also define a WP Bones Model and use the class directly."
+msgstr ""
+"Puoi anche definire un modello WP Bones e utilizzare direttamente la classe."
