@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "da56c567908124720901f16d9f0b77a1",
+    "content-hash": "c721047d0c22553203afce1ce5faf2e3",
     "packages": [
         {
             "name": "brick/math",
@@ -1634,16 +1634,16 @@
         },
         {
             "name": "wpbones/wpbones",
-            "version": "dev-dev",
+            "version": "1.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wpbones/WPBones.git",
-                "reference": "df45c31125fff557bcb18422382ddfbfd534bb6f"
+                "reference": "2b808686c44a308ca97144ab570817c373076823"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wpbones/WPBones/zipball/df45c31125fff557bcb18422382ddfbfd534bb6f",
-                "reference": "df45c31125fff557bcb18422382ddfbfd534bb6f",
+                "url": "https://api.github.com/repos/wpbones/WPBones/zipball/2b808686c44a308ca97144ab570817c373076823",
+                "reference": "2b808686c44a308ca97144ab570817c373076823",
                 "shasum": ""
             },
             "require": {
@@ -1690,20 +1690,20 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-11-14T07:17:13+00:00"
+            "time": "2024-11-15T12:42:29+00:00"
         },
         {
             "name": "wpbones/wpkirk-helpers",
-            "version": "dev-dev",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wpbones/wpkirk-helpers.git",
-                "reference": "ad7d0523ca3f54666b09530bafcfba705a5a912b"
+                "reference": "164470ecf9318360e8969766b62d0e32ee60d040"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wpbones/wpkirk-helpers/zipball/ad7d0523ca3f54666b09530bafcfba705a5a912b",
-                "reference": "ad7d0523ca3f54666b09530bafcfba705a5a912b",
+                "url": "https://api.github.com/repos/wpbones/wpkirk-helpers/zipball/164470ecf9318360e8969766b62d0e32ee60d040",
+                "reference": "164470ecf9318360e8969766b62d0e32ee60d040",
                 "shasum": ""
             },
             "require": {
@@ -1737,18 +1737,15 @@
             "support": {
                 "email": "wpbones.info@gmail.com",
                 "issues": "https://github.com/wpbones/wpkirk-helpers/issues",
-                "source": "https://github.com/wpbones/wpkirk-helpers/tree/dev"
+                "source": "https://github.com/wpbones/wpkirk-helpers/tree/2.0.0"
             },
-            "time": "2024-11-14T06:19:56+00:00"
+            "time": "2024-11-15T09:46:18+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "wpbones/wpbones": 20,
-        "wpbones/wpkirk-helpers": 20
-    },
+    "stability-flags": {},
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
