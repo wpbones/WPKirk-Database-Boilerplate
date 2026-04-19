@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8b23515face5786de142860f25ec6fa7",
+    "content-hash": "f362a684e84799901580aaca71bca419",
     "packages": [
         {
             "name": "brick/math",
@@ -228,16 +228,16 @@
         },
         {
             "name": "eftec/bladeone",
-            "version": "4.18",
+            "version": "4.19.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EFTEC/BladeOne.git",
-                "reference": "fb51dcd21ba6c998b96d26ac5babfca1bd05acdf"
+                "reference": "a22f6471c01c26fea5f6a0d0aca9b5674fc999be"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EFTEC/BladeOne/zipball/fb51dcd21ba6c998b96d26ac5babfca1bd05acdf",
-                "reference": "fb51dcd21ba6c998b96d26ac5babfca1bd05acdf",
+                "url": "https://api.github.com/repos/EFTEC/BladeOne/zipball/a22f6471c01c26fea5f6a0d0aca9b5674fc999be",
+                "reference": "a22f6471c01c26fea5f6a0d0aca9b5674fc999be",
                 "shasum": ""
             },
             "require": {
@@ -281,9 +281,9 @@
             ],
             "support": {
                 "issues": "https://github.com/EFTEC/BladeOne/issues",
-                "source": "https://github.com/EFTEC/BladeOne/tree/4.18"
+                "source": "https://github.com/EFTEC/BladeOne/tree/4.19.1"
             },
-            "time": "2025-02-22T00:12:47+00:00"
+            "time": "2025-09-03T20:50:39+00:00"
         },
         {
             "name": "illuminate/collections",
@@ -1698,23 +1698,22 @@
         },
         {
             "name": "wpbones/wpbones",
-            "version": "dev-master",
+            "version": "v1.11.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wpbones/WPBones.git",
-                "reference": "7cd0f8c4480213b2b6d3d473668e948395536145"
+                "reference": "0f20ae2e0e534765957ec2fa8b21567674179022"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wpbones/WPBones/zipball/7cd0f8c4480213b2b6d3d473668e948395536145",
-                "reference": "7cd0f8c4480213b2b6d3d473668e948395536145",
+                "url": "https://api.github.com/repos/wpbones/WPBones/zipball/0f20ae2e0e534765957ec2fa8b21567674179022",
+                "reference": "0f20ae2e0e534765957ec2fa8b21567674179022",
                 "shasum": ""
             },
             "require": {
                 "eftec/bladeone": "^4.13",
-                "php": ">=7.4"
+                "php": ">=8.1"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "files": [
@@ -1755,7 +1754,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-05-27T05:53:59+00:00"
+            "time": "2026-04-18T13:55:18+00:00"
         },
         {
             "name": "wpbones/wpkirk-helpers",
@@ -1810,14 +1809,12 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "wpbones/wpbones": 20
-    },
+    "stability-flags": {},
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
         "php": ">=8.2"
     },
     "platform-dev": {},
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.9.0"
 }
