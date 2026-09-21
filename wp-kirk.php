@@ -4,7 +4,7 @@
  * Plugin Name: WP Kirk Database Boilerplate
  * Plugin URI: https://github.com/wpbones/WPKirk-Database-Boilerplate
  * Description: WP Bones Boilerplate WordPress plugin
- * Version: 2.0.5
+ * Version: 2.0.6
  * Requires at least: 6.2
  * Requires PHP: 8.2
  * Author: Giovambattista Fazioli
