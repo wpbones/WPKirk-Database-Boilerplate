@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "32c180ec9e29c79769ac88c3876a857f",
+    "content-hash": "93e4ff40bfd18e249af1ae527a4ab05f",
     "packages": [
         {
             "name": "brick/math",
@@ -1710,16 +1710,16 @@
         },
         {
             "name": "wpbones/wpbones",
-            "version": "v2.0.11",
+            "version": "v2.0.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wpbones/WPBones.git",
-                "reference": "fe41aab6cf63fbc6e44144773067294881ff3d65"
+                "reference": "a9b4141a716877a0558a115a9a24b1ae3d6a2f83"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wpbones/WPBones/zipball/fe41aab6cf63fbc6e44144773067294881ff3d65",
-                "reference": "fe41aab6cf63fbc6e44144773067294881ff3d65",
+                "url": "https://api.github.com/repos/wpbones/WPBones/zipball/a9b4141a716877a0558a115a9a24b1ae3d6a2f83",
+                "reference": "a9b4141a716877a0558a115a9a24b1ae3d6a2f83",
                 "shasum": ""
             },
             "require": {
@@ -1770,7 +1770,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-09-25T07:59:14+00:00"
+            "time": "2026-09-25T09:34:31+00:00"
         },
         {
             "name": "wpbones/wpkirk-helpers",
