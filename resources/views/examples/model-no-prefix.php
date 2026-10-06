@@ -22,7 +22,7 @@ ob_start()
     <?php wpkirk_section(__('No Prefix', 'wp-kirk')); ?>
 
     <?php wpkirk_code('@/database/migrations/2024_10_10_134527_create_books_table.php'); ?>
-    <?php wpkirk_code('@/database/seeders/BookSeeder.php'); ?>
+    <?php wpkirk_code('@/database/migrations/2026_10_06_145733_book_seeder.php'); ?>
     <?php wpkirk_code('@/plugin/Models/MyPluginBooks.php'); ?>
 
     <!-- ----------------------------------------------------- -->

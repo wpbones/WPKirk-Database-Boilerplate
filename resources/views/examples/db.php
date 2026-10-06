@@ -33,14 +33,14 @@ foreach (DB::table(\'users\')->get() as $user) {
     <p><?php _e("You can find more", 'wp-kirk'); ?> <a target="_blank" href="https://wpbones.com/docs/DatabaseORM/query-builder"><?php _e("example here", 'wp-kirk'); ?></a></p>
 
     <!-- ----------------------------------------------------- -->
-    <?php wpkirk_section(__('Migrations & Seeders', 'wp-kirk')); ?>
+    <?php wpkirk_section(__('Migrations', 'wp-kirk')); ?>
 
     <p><?php _e("You may use the migrations to create your own custom database tables.", 'wp-kirk'); ?></p>
 
     <?php wpkirk_code('@/database/migrations/2015_12_12_134527_create_products_table.php'); ?>
 
-    <p><?php _e("And the Seeder to insert default records", 'wp-kirk'); ?></p>
-    <?php wpkirk_code('@/database/seeders/ProductSeeder.php'); ?>
+    <p><?php _e("And a migration that inserts the default records: each one runs once per site.", 'wp-kirk'); ?></p>
+    <?php wpkirk_code('@/database/migrations/2026_10_06_145734_product_seeder.php'); ?>
 
     <?php wpkirk_section(__('No Prefix', 'wp-kirk')); ?>
 

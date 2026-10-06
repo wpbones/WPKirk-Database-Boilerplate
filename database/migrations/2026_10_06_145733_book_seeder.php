@@ -1,29 +1,25 @@
 <?php
 
+if (!defined('ABSPATH')) {
+  exit();
+}
+
+use WPKirk\WPBones\Database\Migration;
 use WPKirk\Models\MyPluginBooks;
-use WPKirk\WPBones\Database\Seeder;
 
-return new class extends Seeder {
-  /**
-   * It will be converted to lowercase and with the WordPress prefix.
-   *
-   * @var string The table name.
-   */
-  protected $tablename = 'my_plugin_books';
-
-  /**
-   * Will use the WordPress prefix of the database.
-   *
-   * @since 1.7.0
-   * @var bool
-   */
+/*
+ * Converted from database/seeders/BookSeeder.php by php bones migrate:to-v3.
+ */
+return new class extends Migration {
   protected $usePrefix = false;
 
-  // Run the database seeds just once
-  protected $runOnce = true;
-
-  public function run()
+  public function up()
   {
+    // The seeder had $runOnce: it seeded the table only while it was empty, and so does this.
+    if (!$this->isEmpty('my_plugin_books')) {
+      return;
+    }
+
     // insert by using the model class
     MyPluginBooks::insert([
       ['name' => 'Book iMac', 'price' => '100000'],

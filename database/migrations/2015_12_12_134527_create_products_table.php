@@ -1,6 +1,6 @@
 <?php
 
-use WPKirk\WPBones\Database\Migrations\Migration;
+use WPKirk\WPBones\Database\Migration;
 
 return new class extends Migration {
   public function up()
