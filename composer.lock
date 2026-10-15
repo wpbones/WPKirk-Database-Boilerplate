@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d666f980519ae3e0197c8990a496cd6f",
+    "content-hash": "d666b3c57fbb7f8c0bea3ee6bfb28420",
     "packages": [
         {
             "name": "brick/math",
@@ -1557,16 +1557,16 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v5.4.53",
+            "version": "v5.4.54",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "ae0bbb46f77ff56591d0a0259c7f458f4b3e1f77"
+                "reference": "f27a7131106e8cb792d434e8faea7f3ffb615263"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/ae0bbb46f77ff56591d0a0259c7f458f4b3e1f77",
-                "reference": "ae0bbb46f77ff56591d0a0259c7f458f4b3e1f77",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/f27a7131106e8cb792d434e8faea7f3ffb615263",
+                "reference": "f27a7131106e8cb792d434e8faea7f3ffb615263",
                 "shasum": ""
             },
             "require": {
@@ -1612,7 +1612,7 @@
             "description": "Loads and dumps YAML files",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/yaml/tree/v5.4.53"
+                "source": "https://github.com/symfony/yaml/tree/v5.4.54"
             },
             "funding": [
                 {
@@ -1632,7 +1632,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-05-20T17:13:41+00:00"
+            "time": "2026-08-30T06:09:20+00:00"
         },
         {
             "name": "voku/portable-ascii",
@@ -1710,16 +1710,16 @@
         },
         {
             "name": "wpbones/wpbones",
-            "version": "v3.1.0",
+            "version": "v3.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wpbones/WPBones.git",
-                "reference": "f90f7120f2a2ff3c4b2c37d334307aa4ef8574f9"
+                "reference": "25bcb58ba9477b075f69b03edce0b58dc30ace79"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wpbones/WPBones/zipball/f90f7120f2a2ff3c4b2c37d334307aa4ef8574f9",
-                "reference": "f90f7120f2a2ff3c4b2c37d334307aa4ef8574f9",
+                "url": "https://api.github.com/repos/wpbones/WPBones/zipball/25bcb58ba9477b075f69b03edce0b58dc30ace79",
+                "reference": "25bcb58ba9477b075f69b03edce0b58dc30ace79",
                 "shasum": ""
             },
             "require": {
@@ -1770,7 +1770,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-10-07T13:01:11+00:00"
+            "time": "2026-10-15T16:52:40+00:00"
         },
         {
             "name": "wpbones/wpkirk-helpers",
